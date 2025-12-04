@@ -52,3 +52,9 @@ vim.keymap.set("n", "<leader>st", function ()
     vim.api.nvim_win_set_height(0, 15)
 end)
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true });
+
+
+vim.keymap.set("n", "<leader>cc", function()
+  local cc = require("config.compile")
+  cc.compile_with_command()
+end)
